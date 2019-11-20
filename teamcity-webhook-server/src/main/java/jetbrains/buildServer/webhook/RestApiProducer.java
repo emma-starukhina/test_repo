@@ -21,7 +21,7 @@ public class RestApiProducer implements WebhookDataProducer {
         AGENT(Arrays.asList(AGENT_REGISTRED, AGENT_UNREGISTERED, AGENT_REMOVED), "/app/rest/agents/id:"),
         BUILD(Arrays.asList(BUILD_STARTED, BUILD_FINISHED, BUILD_INTERRUPTED, CHANGES_LOADED), "/app/rest/builds/promotionId:");
 
-        private Strig restApiUrl;
+        private String restApiUrl;
         private List<String> events;
 
         EventType(List<String> events, String restApiUrl) {
