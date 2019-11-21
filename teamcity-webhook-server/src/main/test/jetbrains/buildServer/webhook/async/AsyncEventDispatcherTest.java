@@ -60,7 +60,7 @@ public class AsyncEventDispatcherTest {
 
         while (!dispatcher.isTerminated()){ }
 
-        XStreamFile<List<AsyncEventDispatcher.TaskInfo>> file = new XStreamFile<>(unprocessedEventsFilePath.toFile(), new XStreamHolder());
+        XStreamFle<List<AsyncEventDispatcher.TaskInfo>> file = new XStreamFile<>(unprocessedEventsFilePath.toFile(), new XStreamHolder());
         List<AsyncEventDispatcher.TaskInfo> queue = file.deserialize().stream().filter( i -> i.getRunnerName().equals(listener.getUniqName())).collect(Collectors.toList());
 
         for (int i = result.size(), j = 0; i < 20 ; i++, j++) {
