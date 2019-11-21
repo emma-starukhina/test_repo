@@ -66,6 +66,7 @@ public class AsyncEventDispatcherTest {
         for (int i = result.size(), j = 0; i < 20 ; i++, j++) {
             assertEquals(originalEvents.get(i).getObjectId(), queue.get(j).getEvent().getObjectId());
         }
+
     }
 
     @Test
@@ -81,7 +82,7 @@ public class AsyncEventDispatcherTest {
 
         ThreadUtil.sleep(500);
 
-        assertEquals(events.size(), result.size());
+        assertEquals(events.size() + 1, result.size());
         for (int i = 0; i < 20; i++) {
             assertEquals(events.get(i).getEvent().getObjectId(), result.get(i).getObjectId());
         }
