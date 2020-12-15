@@ -33,7 +33,7 @@ project {
 
     params {
         password("se3", "credentialsJSON:ed29cd12-33ea-48be-bfd7-def39a19aade")
-        password("sec1", "credentialsJSON:7da1e102-60c3-4dbb-a9aa-673b6a6f592a")
+        password("sec1", "credentialsJSON:0602a5ce-0d3f-423c-804f-2629ea1afeeb")
     }
 }
 
